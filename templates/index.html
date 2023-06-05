@@ -1,0 +1,116 @@
+<DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icon.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" integrity="sha512-mRuH7OxetZB1XiSaKZ2fxENKgxVvx3ffpzX0FUcaP6GBqAuqOLc8YiC/3EVTUVt5p5mIRT5D9i4LitZUQKWNCg==" crossorigin="anonymous" />
+		
+		<link rel="stylesheet" href="static/style.css" />
+		<title>ChatBot</title>
+	</head>
+	<body>
+		<nav class="navbar navbar navbar-expand-md navbar-light fixed-top">
+			<div class="container-fluid">
+			  <a class="navbar-brand" href="#">ChatBot</a>
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse ul" id="navbarSupportedContent">
+				<ul class=" nav navbar-nav me-auto mb-2 mb-lg-0 w-100 nav-underline">
+				  <li class="nav-item">
+					<a class="nav-link" aria-current="page" href="#"><b>Home</b></a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#"> <b>About Us</b> </a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="{{ url_for('feedback')}}"><b>Feedback</b> </a>
+				  </li>
+				  <li>
+					<button class="btn btn-outline-primary" type="submit">Logout
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><path d="M10 22H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h5"></path><polyline points="17 16 21 12 17 8"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+					</button>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		</nav>
+		
+		<div class="hero">
+			<h1 class="hero-h1">HI THERE!!!</h1>
+			<p class="hero-p">I am here to answer your queries related to college campus, </p>
+			<p class="hero-p2">admission, fee structure, placement activities, current events, etc..,</p>
+
+		</div>
+		<div>
+			<img class="hero-img" src="https://domicity.com.co/wp-content/uploads/chat-bot.png" alt="" height="500px" width="500px">
+		</div>
+		<div class="feedback">
+			<h2 class="feedback-h2">One Valuable Feedback <br><span>Will help us to improve our chatbot performance</span></h2>
+			<!-- <button type="button"  class="btn btn-outline-secondary"><b>Subscribe</b></button> -->
+			<a href="{{ url_for('feedback')}}"><button type="button" id="feedback-button" class="btn btn-outline-light">Feedback</button></a>
+		  </div>
+
+		<!-- <div class="hero"> 
+			<div class="hero-content">
+			  <h2 class="hero-welcome">Welcome!</h2> <br></br>
+			  <p class="hero-para">Hi there, I am here to answer your queries related to college campus, admission, fee structure, placement activities, current events, etc..,</p> <br></br> 
+			  <p class="hero-para">courses, Topline Trainers, Internship Programs In Association with world class companies </p> <br></br> 
+			  <p class="hero-para"> and universities.</p> </div>
+			  <div class="hero-inline-box"> 
+				<h2 class="hero-inline-box-h2">Online CEP <br></br> <span class="hero-span">Solutions!</span></h2>
+				<img class="hero-img" src="https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/01/18182329/basic-computer-courses-list.jpg"></img>
+			  </div>
+			</div>
+		<div> -->
+
+
+
+
+
+		<section>
+			<button class="chat-btn">
+				<svg width="36" height="29" viewBox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M28.2857 10.5714C28.2857 4.88616 21.9576 0.285714 14.1429 0.285714C6.32813 0.285714 0 4.88616 0 10.5714C0 13.8259 2.08929 16.7388 5.34375 18.6272C4.66071 20.2946 3.77679 21.0781 2.9933 21.9621C2.77232 22.2232 2.51116 22.4643 2.59152 22.846C2.65179 23.1875 2.93304 23.4286 3.23438 23.4286C3.25446 23.4286 3.27455 23.4286 3.29464 23.4286C3.89732 23.3482 4.47991 23.2478 5.02232 23.1071C7.05134 22.5848 8.93973 21.721 10.6071 20.5357C11.7321 20.7366 12.9174 20.8571 14.1429 20.8571C21.9576 20.8571 28.2857 16.2567 28.2857 10.5714ZM36 15.7143C36 12.3594 33.7902 9.38616 30.3951 7.51786C30.6964 8.50223 30.8571 9.52679 30.8571 10.5714C30.8571 14.1674 29.0089 17.4821 25.654 19.933C22.5402 22.183 18.4621 23.4286 14.1429 23.4286C13.5603 23.4286 12.9576 23.3884 12.375 23.3482C14.8862 24.9955 18.221 26 21.8571 26C23.0826 26 24.2679 25.8795 25.3929 25.6786C27.0603 26.8638 28.9487 27.7277 30.9777 28.25C31.5201 28.3906 32.1027 28.4911 32.7054 28.5714C33.0268 28.6116 33.3281 28.3504 33.4085 27.9888C33.4888 27.6071 33.2277 27.3661 33.0067 27.1049C32.2232 26.221 31.3393 25.4375 30.6563 23.7701C33.9107 21.8817 36 18.9888 36 15.7143Z" fill="#581B98"/>
+				</svg>	
+			</button>
+
+			<!-- pop up -->
+			<div class="chat-popup">
+
+				<!-- inside chat box area -->
+				<div class="chat-area" id="chatId">
+					<!-- <div class="chat-header">
+						<span class="chat-header-span1">ChatBot</span><br>
+						<span class="chat-header-span2">Hi there, How can I help you?</span>	
+					</div> -->
+					<!-- <div class="income-msg">
+						<span class="msg">Hi, You can ask me anything related to SRM VEC College.. <br> <br> 1. Admission Queries <br> 2. Transport Queries <br> 3. Result Queries <br> 4. Timetable Queries </span>
+					</div> -->
+				</div>
+
+				<!-- input area into chat -->
+				<div class="input-area">
+					<div class="input-group flex-nowrap">
+						<input type="text" class="form-control rounded-pill" placeholder="Type your messsage here..." aria-label="Username" aria-describedby="addon-wrapping">
+					</div>
+					<button class="submit">
+						<i class="material-icons">
+							send
+						</i>
+					</button>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- javascript libraries -->
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="static/main.js"></script>
+	</body>
+</html>

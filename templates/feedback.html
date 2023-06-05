@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log-In</title>
+  <!-- <link rel="stylesheet" href="public\login.css"> -->
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    body {
+      /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+      font-weight: 100;
+      font-size: 12px;
+      line-height: 30px;
+      color: #000000;
+      background: #070A52; 
+    }
+  
+    .container {
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+    }
+  
+    #login {
+      background: #F9F9F9;
+      padding: 35px;
+      margin: 150px 0;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+      border-radius: 25px;
+    height: 410px;
+    }
+  
+    h3 {
+      display: block;
+      font-size: 30px;
+      font-weight: 300;
+      margin-bottom: 10px;
+      transform: translateY(30px);
+      animation: moveup 0.3s linear both;
+      text-align: center;
+      padding: 15px;
+    }
+  
+    fieldset {
+      border: medium none !important;
+      margin: 0 0 10px;
+      min-width: 100%;
+      padding: 10px;
+      width: 100%;
+    }
+  
+    p {
+      font-size: 15px;
+      transform: translateY(30px);
+      animation: moveup 1s linear both;
+      padding: 10px;
+      text-align: center;
+    }
+
+    #login input[type="text"],
+    #login input[type="password"],
+    #login textarea {
+      width: 100%;
+      border: 1px solid #ccc;
+      background: #FFF;
+      margin: 0 0 5px;
+      padding: 10px;
+      transform: translateY(30px);
+      animation: moveup 1s linear both;
+    }
+  
+    #login input:hover
+    {
+      border-color:#000000;
+    }
+  
+    #login button[type="submit"] {
+      cursor: pointer;
+      width: 100%;
+      border: none;
+      background: #000000;
+      color: #FFF;
+      margin: 0 0 5px;
+      padding: 10px;
+      font-size: 15px;
+      transform: translateY(30px);
+      animation: moveup 1.5s linear both;
+    }
+  
+    #login button[type="submit"]:hover {
+      background: #333333;
+    }
+
+    a:link{
+      text-decoration: none;
+      color: #000000;
+    }
+  
+    @keyframes moveup {
+      100%{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">  
+    <form id="login" onsubmit="myFunction()">
+      <h3>Feedback</h3>
+      <fieldset>
+        <input placeholder="Type your queries here" type="text" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Any other suggestions" type="text" tabindex="2" required>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" id="contact-submit">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+  <script>
+    function myFunction() {
+      alert("Thank you for your feedback");
+    }
+  </script>
+</body>
+</html>
